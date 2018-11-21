@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_payment_save_before">
+        <observer name="save_loyalty_card" instance="DamNT\LoyaltyCard\Observer\SaveLoyaltyCardToOrderObserver"/>
+    </event>
+
+    <event name="payment_method_assign_data_payflowpro">
+        <observer name="payflowpro_gateway_data_assign" instance="DamNT\LoyaltyCard\Observer\DataAssignObserver" />
+    </event>
+</config>
